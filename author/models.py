@@ -1,6 +1,6 @@
 from algometica import db
 
-class Author():
+class Author(db.Model):
 	id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 	fullname = db.Column(db.String(80))
 	email = db.Column(db.String(35), unique=True)
@@ -16,7 +16,7 @@ class Author():
 		self.is_author = is_author
 
 	def __repr__(self):
-		return '<Author {}'.format(self.username)
+		return '<Author {}>'.format(self.username)
 
 
 
