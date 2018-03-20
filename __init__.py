@@ -7,4 +7,4 @@ app.config.from_object('settings')
 db = SQLAlchemy(app)
 
 from blog import views
-from author import views
+from author import views, models
